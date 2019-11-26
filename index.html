@@ -27,7 +27,8 @@
                 // Render the current patient (or any error)
                 client.patient.read().then(
                     function(pt) {
-                        document.getElementById("patient").innerText = JSON.stringify(pt, null, 4);
+                        //document.getElementById("patient").innerText = JSON.stringify(pt, null, 4);
+                        document.getElementById("patient").innerText = JSON.stringify(pt.gender, null, 4);
                     },
                     function(error) {
                         document.getElementById("patient").innerText = error.stack;
