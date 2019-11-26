@@ -29,7 +29,14 @@
                     function(pt) {
                         //document.getElementById("patient").innerText = JSON.stringify(pt, null, 4);
                         //document.getElementById("patient").innerText = JSON.stringify(pt.gender, null, 4);
-                        document.getElementById("patient").innerText = pt.gender;
+                        //document.getElementById("patient").innerText = pt.gender;
+
+                        document.getElementById("patient").innerText = pt.birthDate + " " + pt.gender + " " + pt.name[0].family + ", " + pt.name[0].given;
+
+                        //if(typeof patient.name[0] !== 'undefined') {
+                        //    fname = patient.name[0].given.join(' ');
+                        //    lname = patient.name[0].family.join(' ');
+                        //}
                     },
                     function(error) {
                         document.getElementById("patient").innerText = error.stack;
