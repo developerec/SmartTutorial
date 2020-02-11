@@ -43,8 +43,10 @@
                     }
                 );
 
+                console.log("looking for meds");
                 client.patient.meds.read().then(
                     function(med) {
+                        console.log("found meds");
                         document.getElementById("meds").innerText = JSON.stringify(meds, null, 4);
                     }
                 );
