@@ -24,7 +24,6 @@
     <body>
         <h4>Current Patient</h4>
         <div id="patient">Loading...</div>
-        <h2>Date of Birth</h2>
         <div id="patientDOB">Loading...</div>
         <br/>
         <h4>Medications</h4>
@@ -39,7 +38,7 @@
                         // document.getElementById("patient").innerText = JSON.stringify(pt.gender, null, 4);
                         // document.getElementById("patient").innerText = pt.gender;
 
-                        document.getElementById("patientDOB").innerText = pt.birthDate + " " + pt.gender + " " + pt.name[0].family + ", " + pt.name[0].given;
+                        document.getElementById("patientDOB").innerText = "Name: " + pt.name[0].family + ", " + pt.name[0].given + " - DOB: " + pt.birthDate + " - Gender: " + pt.gender;
 
                         //if(typeof patient.name[0] !== 'undefined') {
                         //    fname = patient.name[0].given.join(' ');
