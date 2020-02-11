@@ -25,6 +25,7 @@
             console.log("start FHIR Script");
             FHIR.oauth2.ready().then(function(client) {
                 
+                console.log("inside oauth2.ready()");
                 // Render the current patient (or any error)
                 client.patient.read().then(
                     function(pt) {
